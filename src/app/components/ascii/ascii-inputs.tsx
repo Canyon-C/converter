@@ -3,11 +3,16 @@ import { PlaceholdersAndVanishInput } from "./aceInput";
 import { useState } from "react";
 
 export const AsciiInputs = () => {
-  const [ASCIIOutput, setASCIIOutput] = useState<number>(0);
+  const [ASCIIOutput, setASCIIOutput] = useState<string>("");
   const placeholders = ["abc", "abcd", "abcdef", "abcdef(even g?)"];
 
   const onSubmit = (value: string) => {
-    setASCIIOutput(value.charCodeAt(0));
+    let decimal = "";
+    for (let i = 0; i < value.length; i++) {
+      const character = value.charAt(i);
+      decimal += character.charCodeAt(0) + " ";
+    }
+    setASCIIOutput(decimal);
     console.log("Submitted Successfully");
   };
 
