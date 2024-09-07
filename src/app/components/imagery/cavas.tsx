@@ -35,7 +35,7 @@ export const Canvas = () => {
 
   return (
     <div className="pb-5 w-full flex flex-col gap-5 justify-center items-center">
-      <p className="pt-5">My cat Tiger :3</p>
+      <p className="pt-5">My cat Tiger</p>
 
       <canvas
         className="px-5 w-full sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/3"

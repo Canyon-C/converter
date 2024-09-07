@@ -4,7 +4,6 @@ import { useState } from "react";
 
 export const DecimalConvert = () => {
   const [binaryOutput, setBinaryOutput] = useState<string>("");
-  //   const [octalOutput, setOctalOutput] = useState<string>("");
   const placeholders = [
     "16",
     "perhaps 200?",
@@ -14,7 +13,6 @@ export const DecimalConvert = () => {
 
   const onSubmit = (value: string) => {
     setBinaryOutput(Number(value).toString(2));
-    console.log("Submitted Successfully");
   };
 
   return (

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export const AsciiInputs = () => {
   const [ASCIIOutput, setASCIIOutput] = useState<string>("");
-  const placeholders = ["abc", "abcd", "abcdef", "abcdef(even g?)"];
+  const placeholders = ["abc", "abcd", "abcd(even e?)"];
 
   const onSubmit = (value: string) => {
     let decimal = "";
@@ -13,7 +13,6 @@ export const AsciiInputs = () => {
       decimal += character.charCodeAt(0) + " ";
     }
     setASCIIOutput(decimal);
-    console.log("Submitted Successfully");
   };
 
   return (
