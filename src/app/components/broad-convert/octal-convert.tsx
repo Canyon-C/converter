@@ -4,7 +4,6 @@ import { useState } from "react";
 
 export const OctalConvert = () => {
   const [binaryOutput, setBinaryOutput] = useState<string>("");
-  //   const [octalOutput, setOctalOutput] = useState<string>("");
   const placeholders = [
     "Pick your favorite number",
     "2000",
@@ -14,7 +13,6 @@ export const OctalConvert = () => {
 
   const onSubmit = (value: number) => {
     setBinaryOutput(Number(value).toString(8));
-    console.log("Submitted Successfully");
   };
 
   return (
