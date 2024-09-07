@@ -12,7 +12,7 @@ export const DecimalConvert = () => {
     "24?",
   ];
 
-  const onSubmit = (value: number) => {
+  const onSubmit = (value: string) => {
     setBinaryOutput(Number(value).toString(2));
     console.log("Submitted Successfully");
   };

@@ -11,7 +11,7 @@ export const OctalConvert = () => {
     "90? 100??!",
   ];
 
-  const onSubmit = (value: number) => {
+  const onSubmit = (value: string) => {
     setBinaryOutput(Number(value).toString(8));
   };
 
