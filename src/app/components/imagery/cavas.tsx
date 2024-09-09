@@ -21,7 +21,7 @@ export const Canvas = () => {
           const green = pixelData[i + 1];
           const blue = pixelData[i + 2];
           pixels.push(
-            <p>
+            <p key={i}>
               <span className="text-red-500">Red:{red} </span>
               <span className="text-green-500">Green:{green} </span>
               <span className="text-blue-500">Blue:{blue}</span>

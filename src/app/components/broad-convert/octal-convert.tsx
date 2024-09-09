@@ -3,7 +3,7 @@ import { PlaceholdersAndVanishInputDecimal } from "../ascii/aceInput";
 import { useState } from "react";
 
 export const OctalConvert = () => {
-  const [binaryOutput, setBinaryOutput] = useState<string>("");
+  const [octalOutput, setOctalOutput] = useState<string>("");
   const placeholders = [
     "Pick your favorite number",
     "2000",
@@ -12,7 +12,7 @@ export const OctalConvert = () => {
   ];
 
   const onSubmit = (value: string) => {
-    setBinaryOutput(Number(value).toString(8));
+    setOctalOutput(Number(value).toString(8));
   };
 
   return (
@@ -21,12 +21,15 @@ export const OctalConvert = () => {
         <p className="text-blue-500 text-center w-full py-2">
           Decimal to Octal
         </p>
-        <PlaceholdersAndVanishInputDecimal
-          placeholders={placeholders}
-          onSubmit={onSubmit}
-        />
+        <div className="flex justify-center w-full px-5">
+          <PlaceholdersAndVanishInputDecimal
+            placeholders={placeholders}
+            onSubmit={onSubmit}
+          />
+        </div>
+
         <p className="text-blue-500 w-full text-center pt-14">
-          {binaryOutput ? binaryOutput : "null"}
+          {octalOutput ? octalOutput : "null"}
         </p>
       </div>
     </div>
